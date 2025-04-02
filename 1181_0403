@@ -1,0 +1,12 @@
+n = int(input())
+Voca = [str(input()) for _ in range(n)]
+
+# 중복 제거
+Voca = list(set(Voca))
+
+# 길이순 정렬, 같으면 사전순
+Voca.sort()         # 먼저 사전순 정렬
+Voca.sort(key=len)  # 그 다음 길이순 정렬 (길이가 같을 땐 사전순이 유지됨)
+
+for i in Voca:
+    print(i)
